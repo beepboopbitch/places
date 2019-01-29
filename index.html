@@ -1,10 +1,65 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Place Book</title>
   </head>
   <body>
-    
+    <div class="container">
+      <h1>Place Book</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <hr>
+          <h2>Add a place you've visited:</h2>
+          <form id="new-place">
+            <div class="form-group">
+              <label for="new-location">Location</label>
+              <input type="text"  class="form-control" id="new-location">
+            </div>
+            <div class="form-group">
+              <label for="new-landmark">Landmarks visited</label>
+              <input type="text"  class="form-control" id="new-landmark">
+            </div>
+            <div class="form-group">
+              <label for="new-timeVisited">When did you visit?</label>
+              <input type="text"  class="form-control" id="new-timeVisited">
+            </div>
+            <div class="form-group">
+              <label for="new-notes">Any notes to add?</label>
+              <input type="text"  class="form-control" id="new-notes">
+            </div>
+            <button type="submit" class="btn-primary">Add</button>
+            <!-- <div class="edit">
+              <div class="form-group">
+                <select class="form-control" id="edit">
+                  <option value="Location">Location</option>
+                  <option value="Landmark">Landmark</option>
+                  <option value="TimeVisited">Time Visited</option>
+                  <option value="Notes">Notes</option>
+                </select>
+              </div>
+            </div> -->
+          </form>
+          <hr>
+          <h2>Places Visited:</h2>
+          <ul id="places">
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div id="show-place">
+            <p>Location: <span class="location"></span></p>
+            <p>Landmark(s) visited: <span class="landmark"></span></p>
+            <p>Time Visited: <span class="timeVisited"></span></p>
+            <p>Notes: <span class="notes"></span></p>
+            <div id="buttons">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
